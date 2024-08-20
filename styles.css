@@ -1,0 +1,13 @@
+#encabezado {
+    font-size: 5vh;
+    display: flex;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: cadetblue;
+    margin: 0px;
+    padding: 5%;
+    border: 0px;
+}
+#barralateral {
+    font-size: 3vh;
+
+}
