@@ -1,0 +1,130 @@
+#encabezado {
+    font-size: 5vh;
+    display: flex;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: cadetblue;
+    margin: 0px;
+    padding: 5%;
+    border: 0px;
+}
+#barralateral {
+    font-size: 3vh;
+
+}
+
+/* Estilos generales */
+body {
+    
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: block;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 100%;
+    background-color: #405885;
+    color: rgb(255, 255, 255);
+    padding-left: 10%;
+    padding-right: 10vh;
+    
+    
+}
+
+#sidebar-include {
+    display:flex
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    
+}
+
+.menu li {
+    margin-bottom: 5%;
+    
+}
+
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.menu a:hover {
+    background-color: #7ba5cfb9;
+    
+}
+
+.content {
+    flex: 1;
+    padding: 10%;
+    background-color: #ecf0f1;
+}
+
+/* Por defecto, todas las secciones del menu lat están ocultas */
+.section {
+    display: none;
+}
+
+/* La sección activa se muestra */
+.section.active {
+    display: block;
+}
+
+/* Media Query para pantallas de tamaño mediano (tabletas) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .menu li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+}
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .menu li {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .menu a {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+}
