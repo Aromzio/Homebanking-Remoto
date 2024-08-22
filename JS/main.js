@@ -7,19 +7,19 @@ document.addEventListener("DOMContentLoaded", function() {
                 document.getElementById(elementId).innerHTML = data;
             })
             .catch(error => console.error(`Error al cargar ${filePath}:`, error));
-    }
+    };
 
     // Header
-    loadHTML("header-include", "includes/header.html");
+    //loadHTML("header-include", "includes/header.html");
 
     // Sidebar
-    loadHTML("sidebar-include", "includes/sidebar.html");
+    //loadHTML("sidebar-include", "includes/sidebar.html");
 
     // Footer
     // loadHTML("footer-include", "includes/footer.html");
-    loadHTML("footer-include", "includes\footer.html" ); yo
+    //loadHTML("footer-include", "includes\footer.html" ); yo
    
-
+yo+
     // Control de navegación del menú lateral
     // setTimeout asegura que los elementos están cargados antes de agregar eventos
     setTimeout(() => {
