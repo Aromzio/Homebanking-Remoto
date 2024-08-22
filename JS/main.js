@@ -16,7 +16,9 @@ document.addEventListener("DOMContentLoaded", function() {
     loadHTML("sidebar-include", "includes/sidebar.html");
 
     // Footer
-    loadHTML("footer-include", "includes/footer.html");
+    // loadHTML("footer-include", "includes/footer.html");
+    loadHTML("footer-include", "includes\footer.html" ); yo
+   
 
     // Control de navegación del menú lateral
     // setTimeout asegura que los elementos están cargados antes de agregar eventos
