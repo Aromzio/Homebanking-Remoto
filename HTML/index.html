@@ -1,96 +1,119 @@
-<!--PAGINA DE INICIO-->
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Vancow - Homebanking</title>
-        <link rel="icon" href="/SOURCE/favicon.ico">
-        <link rel="stylesheet" href="../css/styles.css">
-        <!-- <script src="/JS/main.js"></script> -->
-        <script src="/JS/main.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vancow - Homebanking</title>
+    <link rel="icon" href="/SOURCE/favicon.ico">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="/JS/main.js" defer></script>
+    <script src="../JS/currencyConverter.js" defer></script> <!-- convertiro script -->
+</head>
+<body>
+    <header id="header">
+        <img id="icono-encabezado" src="/SOURCE/icono.png" alt="icono Vancow">
+        <h1 id="encabezado">Vancow</h1>   
+    </header>
 
-    </head>
-    <body>
-        <header id="header">
-            <img id="icono-encabezado" src="/SOURCE/icono.png" alt="icono Vancow"><h1 id="encabezado">Vancow</h1>   
-        </header>
-        
-        <div id="header-include"></div> 
+    <div id="header-include"></div> 
 
-        <div class="container">
-            <!-- menu lateral o sidebar -->
-            <div id="sidebar-include">
-
-                <aside class="sidebar">
-                    <ul class="menu">
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="cuentas.html">Cuentas</a></li>
-                        <li><a href="transferencias.html">Transferencias</a></li>
-                        <li><a href="pagos.html">Pagos</a></li>
-                    </ul>
-                </aside>
-
-            </div>
-
-
-            <!-- Contenido Principal -->
-            <main class="content">
-                <section id="inicio" class="section active">
-                    <h2>Inicio</h2>
-                    <p>Bienvenido al Homebanking</p>
-                </section>
-
-                <section id="cuentas" class="section">
-                    <h2>Cuentas</h2>
-                    <p>Contenido de Cuentas.</p>
-                </section>
-    
-                <section id="transferencias" class="section">
-                    <h2>Transferencias</h2>
-                    <p>Contenido de Transferencias.</p>
-                </section>
-    
-                <section id="pagos" class="section">
-                    <h2>Pagos</h2>
-                    <p>Contenido de Pagos.</p>
-                </section>
-
-            </main>
+    <div class="container">
+        <!-- menu lateral o sidebar -->
+        <div id="sidebar-include">
+            <aside class="sidebar">
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="cuentas.html">Cuentas</a></li>
+                    <li><a href="transferencias.html">Transferencias</a></li>
+                    <li><a href="pagos.html">Pagos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li> <!-- Añadido el enlace a Contacto -->
+                </ul>
+            </aside>
         </div>
 
-        <!-- Sugerencia para ubicar el Footer -->
-         
+        <!-- Contenido Principal -->
+        <main class="content">
+            <section id="inicio" class="section active">
+                <h2>Inicio</h2>
+                <p>Bienvenido al Homebanking de Vancow, tu solución financiera de confianza en Argentina. Con nosotros, tu dinero está en buenas manos. Nuestro compromiso es ofrecerte la mejor experiencia en gestión bancaria online, con seguridad y eficiencia.</p>
+                
+                <div class="account-summary">
+                    <h2>Resumen de Cuenta</h2>
+                    <p><strong>Saldo Actual:</strong> $1,250.00</p>
+                    <p><strong>Cuenta:</strong> Cuenta Corriente - 1234567890</p>
+                    <p><strong>Tipo de Cuenta:</strong> Cuenta Corriente</p>
+                    <p><strong>Moneda:</strong> ARS (Pesos Argentino)</p>
+                </div>
+
+                <h2>Movimientos Recientes</h2>
+                <ul class="recent-transactions">
+                    <li>
+                        <strong>Compra en Supermercado XYZ</strong>
+                        Fecha: 2024-08-23
+                        <p>Monto: -$150.00</p>
+                    </li>
+                    <li>
+                        <strong>Depósito de Nómina</strong>
+                        Fecha: 2024-08-22
+                        <p>Monto: +$1,000.00</p>
+                    </li>
+                    <li>
+                        <strong>Transferencia a Cuenta Ahorro</strong>
+                        Fecha: 2024-08-21
+                        <p>Monto: -$200.00</p>
+                    </li>
+                </ul>
+
+                <!-- Convertidor de Monedas -->
+                <div id="currency-converter">
+                    <h2>Convertidor de Moneda</h2>
+                    <form id="converter-form">
+                        <label for="amount">Monto:</label>
+                        <input type="number" id="amount" name="amount" required>
+
+                        <label for="from-currency">De:</label>
+                        <select id="from-currency" name="from-currency">
+                            <option value="ARS">Pesos Argentinos (ARS)</option>
+                            <option value="USD">Dólares Estadounidenses (USD)</option>
+                        </select>
+
+                        <label for="to-currency">A:</label>
+                        <select id="to-currency" name="to-currency">
+                            <option value="ARS">Pesos Argentinos (ARS)</option>
+                            <option value="USD">Dólares Estadounidenses (USD)</option>
+                        </select>
+
+                        <button type="submit">Convertir</button>
+                    </form>
+                    <div id="conversion-result"></div>
+                </div> <!-- Cerrado el div para el convertidor -->
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
     <footer class="footer">
-            <h2>&copy; 2024 Vancow</h2>
-            <div class="footer-info-adicional">
-                <a href="politica-privacidad">Política de Privacidad</a>
-                <a href="terminos-condiciones">Términos y Condiciones</a>
-                <a href="contacto">Contacto</a>
-            </div>
-  
-            <div class="footer-redes-sociales">
-                <a href="https://wa.me/123456789" >
-                    <img src="https://cdn.iconscout.com/icon/free/png-512/free-whatsapp-131-457973.png?f=webp&w=256" alt="WhatsApp">
-                </a>
-                <a href="https://www.facebook.com" >
-                    <img src= "https://cdn.iconscout.com/icon/free/png-512/free-facebook-redes-sociales-fb-logo-cuadrado-44659.png?f=webp&w=256" alt="Facebook">
-                </a>
-                <a href="https://www.instagram.com" >
-                    <img src= "https://cdn.iconscout.com/icon/free/png-512/free-instagram-46-151040.png?f=webp&w=256" alt="Instagram">
-                </a>
-                <a href="https://twitter.com" >
-                    <img src= "https://cdn.iconscout.com/icon/free/png-512/free-x-12020338-9823103.png?f=webp&w=256" alt ="X">
-                </a>
-            </div>
-            
-            </div>
-        
-   </footer>
-      
-
-        
-        
-    </body>
+        <h2>&copy; 2024 Vancow</h2>
+        <div class="footer-info-adicional">
+            <a href="politicas-de-privacidad.html">Políticas de Privacidad</a>
+            <a href="terminos-condiciones.html">Términos y Condiciones</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+    
+        <div class="footer-redes-sociales">
+            <a href="https://wa.me/123456789">
+                <img src="https://cdn.iconscout.com/icon/free/png-512/free-whatsapp-131-457973.png?f=webp&w=256" alt="WhatsApp">
+            </a>
+            <a href="https://www.facebook.com">
+                <img src="https://cdn.iconscout.com/icon/free/png-512/free-facebook-redes-sociales-fb-logo-cuadrado-44659.png?f=webp&w=256" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com">
+                <img src="https://cdn.iconscout.com/icon/free/png-512/free-instagram-46-151040.png?f=webp&w=256" alt="Instagram">
+            </a>
+            <a href="https://twitter.com">
+                <img src="https://cdn.iconscout.com/icon/free/png-512/free-x-12020338-9823103.png?f=webp&w=256" alt="X">
+            </a>
+        </div>
+    </footer>
+</body>
 </html>
-
