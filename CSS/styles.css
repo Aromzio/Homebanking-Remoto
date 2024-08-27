@@ -11,7 +11,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #004a8f; /* Color más oscuro para el header */
+    background-color: rgb(95, 158, 160); /* Color más oscuro para el header */
     padding: 1em 2em;
 }
 
@@ -30,12 +30,12 @@ body {
 .footer {
     text-align: center;
     padding: 20px;
-    background-color: #004a8f; /* Color más oscuro para el footer */
+    background-color: rgb(95, 158, 160); /* Color más oscuro para el footer */
     color: white;
 }
 
 .footer h2 {
-    background-color: #003d6b; /* Un tono más oscuro para el fondo del h2 */
+    background-color: rgb(95, 158, 160); 
     padding: 10px 20px;
     font-size: 24px;
     border-radius: 5px;
@@ -105,7 +105,7 @@ body {
 .sidebar .logo h1 {
     font-size: 1.5em;
     margin: 0;
-    color: #004a8f; /* Color del texto del logo */
+    color: rgb(95, 158, 160); /* Color del texto del logo */
 }
 
 .menu {
@@ -168,7 +168,7 @@ body {
 .account-summary h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
-    color: #004a8f;
+    color: rgb(107, 107, 107);
 }
 
 .account-summary p {
@@ -209,7 +209,7 @@ body {
 .loan-calculator h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
-    color: #004a8f;
+    color: rgb(107, 107, 107);
 }
 
 form {
@@ -233,12 +233,12 @@ form select, form input {
 }
 
 form select:focus, form input:focus {
-    border-color: #004a8f;
+    border-color: rgb(95, 158, 160);
     outline: none;
 }
 
 form button {
-    background-color: #004a8f;
+    background-color: rgb(107, 107, 107);
     color: white;
     border: none;
     padding: 12px;
@@ -249,7 +249,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #003d6b;
+    background-color: rgb(107, 107, 107);
 }
 
 /* Estilos para la lista de pagos */
@@ -348,7 +348,7 @@ form button:hover {
 #currency-converter h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
-    color: #004a8f;
+    color: rgb(107, 107, 107);
 }
 
 #converter-form {
@@ -374,12 +374,12 @@ form button:hover {
 
 #converter-form input:focus,
 #converter-form select:focus {
-    border-color: #004a8f;
+    border-color: rgb(107, 107, 107);
     outline: none;
 }
 
 #converter-form button {
-    background-color: #004a8f;
+    background-color: rgb(95, 158, 160);
     color: white;
     border: none;
     padding: 12px;
@@ -390,7 +390,7 @@ form button:hover {
 }
 
 #converter-form button:hover {
-    background-color: #003d6b;
+    background-color: rgb(107, 107, 107);
 }
 
 #conversion-result {

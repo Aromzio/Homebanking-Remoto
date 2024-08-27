@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ARS: 1       // Tasa de cambio de ARS a ARS (1:1)
         },
         USD: {
-            ARS: 178.57, // Tasa de cambio de USD a ARS
+            ARS: 1785.7, // Tasa de cambio de USD a ARS
             USD: 1       // Tasa de cambio de USD a USD (1:1)
         }
     };
