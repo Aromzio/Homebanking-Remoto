@@ -1,72 +1,98 @@
-<!--PAGINA DE CUENTAS-->
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Vancow - Homebanking</title>
-        <link rel="icon" href="/SOURCE/favicon.ico">
-        <link rel="stylesheet" href="../css/styles.css">
-        <!-- <script src="/JS/main.js"></script> -->
-        <script src="/JS/main.js"></script>
-    </head>
-    <body>
-        <header id="header">
-            <img id="icono-encabezado" src="/SOURCE/icono.png" alt="icono Vancow"><h1 id="encabezado">Vancow</h1>   
-        </header>
-        <div id="header-include"></div> 
 
-        <div class="container">
-            <!-- menu lateral o sidebar -->
-            <div id="sidebar-include">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vancow - Homebanking</title>
+    <link rel="icon" href="/SOURCE/favicon.ico">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="/JS/main.js"></script> 
+    <script src="../JS/cuentas.js"></script>
+</head>
 
-                <aside class="sidebar">
-                    <ul class="menu">
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="cuentas.html">Cuentas</a></li>
-                        <li><a href="transferencias.html">Transferencias</a></li>
-                        <li><a href="pagos.html">Pagos</a></li>
-                    </ul>
+<body>
+    <header id="header">
+        <img id="icono-encabezado" src="/SOURCE/icono.png" alt="icono Vancow">
+        <h1 id="encabezado">Vancow</h1>
+    </header>
+    <div id="header-include"></div>
 
-                </aside>
-
-            </div>
-
-            <!-- Contenido Principal -->
-            <main class="content">
-                <h2>Cuentas</h2>
-                <p>Aca podes ver tus cuentas.</p>
+    <div class="container">
+        <!-- menu lateral o sidebar -->
+        <div id="sidebar-include">
+            <aside class="sidebar">
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="cuentas.html">Cuentas</a></li>
+                    <li><a href="transferencias.html">Transferencias</a></li>
+                    <li><a href="pagos.html">Pagos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li> 
+                </ul>
+            </aside>
         </div>
 
-        <!-- Sugerencia para ubicar el Footer -->
-         <div id="footer-include">
-            <footer class="footer">
-                <h2>&copy; 2024 Vancow</h2>
+        <!-- Contenido Principal -->
+        <main class="content">
+            <h2>Cuentas</h2>
+            <p>Aca podes ver tus cuentas.</p>
+            <div id="account-summary" class="account-summary"></div>
+
+            <h3>Realizar Transferencia</h3>
+            <form id="transfer-form">
+                <label for="from-account">Desde:</label>
+                <select id="from-account" required>
+                    <!-- Opciones dinámicas serán insertadas por JavaScript -->
+                </select>
+                <br>
+                <label for="to-account">Hasta:</label>
+                <select id="to-account" required>
+                    <!-- Opciones dinámicas serán insertadas por JavaScript -->
+                </select>
+                <br>
+                <label for="amount">Monto:</label>
+                <input type="number" id="amount" min="0" step="0.01" required>
+                <br>
+                <button type="submit">Transferir</button>
+            </form>
+
+            <h3>Tarjetas</h3>
+            <div class="account">
+                <h2>Tarjeta de Crédito</h2>
+                <p>Saldo: <span id="credit-card-balance">$0</span></p>
+            </div>
+            <div class="account">
+                <h2>Tarjeta de Débito</h2>
+                <p>Saldo: <span id="debit-card-balance">$0</span></p>
+            </div>
+        </main>            
+    </div>
+
+    <!-- Sugerencia para ubicar el Footer -->
+    <div id="footer-include">
+        <footer class="footer">
+            <h2>&copy; 2024 Vancow</h2>
             <div class="footer-info-adicional">
                 <a href="politica-privacidad">Política de Privacidad</a>
                 <a href="terminos-condiciones">Términos y Condiciones</a>
                 <a href="contacto">Contacto</a>
             </div>
-  
             <div class="footer-redes-sociales">
-                <a href="https://wa.me/123456789" >
+                <a href="https://wa.me/123456789">
                     <img src="https://cdn.iconscout.com/icon/free/png-512/free-whatsapp-131-457973.png?f=webp&w=256" alt="WhatsApp">
                 </a>
-                <a href="https://www.facebook.com" >
-                    <img src= "https://cdn.iconscout.com/icon/free/png-512/free-facebook-redes-sociales-fb-logo-cuadrado-44659.png?f=webp&w=256" alt="Facebook">
+                <a href="https://www.facebook.com">
+                    <img src="https://cdn.iconscout.com/icon/free/png-512/free-facebook-redes-sociales-fb-logo-cuadrado-44659.png?f=webp&w=256" alt="Facebook">
                 </a>
-                <a href="https://www.instagram.com" >
-                    <img src= "https://cdn.iconscout.com/icon/free/png-512/free-instagram-46-151040.png?f=webp&w=256" alt="Instagram">
+                <a href="https://www.instagram.com">
+                    <img src="https://cdn.iconscout.com/icon/free/png-512/free-instagram-46-151040.png?f=webp&w=256" alt="Instagram">
                 </a>
-                <a href="https://twitter.com" >
-                    <img src= "https://cdn.iconscout.com/icon/free/png-512/free-x-12020338-9823103.png?f=webp&w=256" alt ="X">
+                <a href="https://twitter.com">
+                    <img src="https://cdn.iconscout.com/icon/free/png-512/free-x-12020338-9823103.png?f=webp&w=256" alt="X">
                 </a>
             </div>
-            
-            </div>
-            </footer>
-         </div> 
+        </footer>
+    </div>
+</body>
 
-        
-    </body>
 </html>

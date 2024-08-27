@@ -1,16 +1,14 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Función para cargar e insertar un archivo HTML en un elemento por su ID
-    function loadHTML(elementId, filePath) {
+document.addEventListener("DOMContentLoaded", function loadHTML(elementId, filePath) {
         fetch(filePath)
             .then(response => response.text())
             .then(data => {
                 document.getElementById(elementId).innerHTML = data;
             })
             .catch(error => console.error(`Error al cargar ${filePath}:`, error));
-    };
+    });
 
     // Header
-    //loadHTML("header-include", "includes/header.html");
+    loadHTML("header-include", "includes/header.html");
 
     // Sidebar
     //loadHTML("sidebar-include", "includes/sidebar.html");
@@ -41,4 +39,3 @@ yo+
             });
         });
     }, 100); // El tiempo puede ajustarse según la velocidad de carga de los includes
-});
