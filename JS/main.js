@@ -1,41 +1,9 @@
-document.addEventListener("DOMContentLoaded", function loadHTML(elementId, filePath) {
-        fetch(filePath)
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById(elementId).innerHTML = data;
-            })
-            .catch(error => console.error(`Error al cargar ${filePath}:`, error));
-    });
+//sidebar
+    fetch('sidebar.html')  // 1. solicitud HTTP GET para obtener el archivo sidebar.html 
+    .then(response => response.text())  // 2. Cuando la solicitud es exitosa, convierte la respuesta en texto plano.
+    .then(data => {
+        document.getElementById('sidebar').innerHTML = data;  // 3. Inserta el contenido del archivo sidebar.html dentro del elemento con el id 'sidebar'.
+    })
+   .catch(error => console.log('Error cargando el sidebar:', error));  // 4. Si ocurre un error (por ejemplo, si el archivo no se encuentra), se captura y se muestra en la consola.
 
-    // Header
-    loadHTML("header-include", "includes/header.html");
 
-    // Sidebar
-    //loadHTML("sidebar-include", "includes/sidebar.html");
-
-    // Footer
-    // loadHTML("footer-include", "includes/footer.html");
-    //loadHTML("footer-include", "includes\footer.html" ); yo
-   
-yo+
-    // Control de navegación del menú lateral
-    // setTimeout asegura que los elementos están cargados antes de agregar eventos
-    setTimeout(() => {
-        const links = document.querySelectorAll('.menu a');
-        const sections = document.querySelectorAll('.section');
-
-        links.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-
-                // Quita clase 'active' de todas las secciones
-                sections.forEach(section => {
-                    section.classList.remove('active');
-                });
-
-                // Añade clase 'active' a la sección seleccionada
-                const sectionId = this.getAttribute('data-section');
-                document.getElementById(sectionId).classList.add('active');
-            });
-        });
-    }, 100); // El tiempo puede ajustarse según la velocidad de carga de los includes

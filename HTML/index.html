@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vancow - Homebanking</title>
     <link rel="icon" href="/SOURCE/favicon.ico">
+    <script src="/JS/main.js"></script> 
     <link rel="stylesheet" href="../css/styles.css">
-    <script src="/JS/main.js" defer></script>
     <script src="../JS/currencyConverter.js" defer></script> <!-- convertiro script -->
+
+    <!-- <link rel="stylesheet" href="..\CSS\sidebar.css"> -->
+    <!-- <script src="..\JS\sidebar.js" defer></script>  -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </head>
 <body>
     <header id="header">
@@ -17,19 +23,11 @@
 
     <div id="header-i"></div> 
 
-    <div class="container">
-        <!-- menu lateral o sidebar -->
-        
-            <aside class="sidebar">
-                <ul class="menu">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="cuentas.html">Cuentas</a></li>
-                    <li><a href="transferencias.html">Transferencias</a></li>
-                    <li><a href="pagos.html">Pagos</a></li>
-                    <li><a href="contacto.html">Contacto</a></li> 
-                </ul>
-            </aside>
+    <!-- menu lateral o sidebar -->
+    <div id="sidebar"> </div>
 
+    <div  class="container">
+        
         <!-- Contenido Principal -->
         <main class="content">
             <section id="inicio" class="section active">
@@ -114,5 +112,8 @@
             </a>
         </div>
     </footer>
+
+
+
 </body>
 </html>
