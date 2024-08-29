@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vancow - Pagos</title>
+    <link rel="icon" href="/SOURCE/favicon.ico">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../JS/Pagos.js" defer></script>
+</head>
+
+<body>
+    <header id="header">
+        <img id="icono-encabezado" src="/SOURCE/icono.png" alt="icono Vancow">
+        <h1 id="encabezado">Vancow</h1>
+    </header>
+    <div id="header-include"></div>
+
+    <div class="container">
+        <!-- menu lateral o sidebar -->
+        <div id="sidebar-include">
+            <aside class="sidebar">
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="cuentas.html">Cuentas</a></li>
+                    <li><a href="transferencias.html">Transferencias</a></li>
+                    <li><a href="pagos.html">Pagos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li> 
+                </ul>
+            </aside>
+        </div>
+
+        <!-- Contenido Principal -->
+        <main class="content">
+            <h2>Pagos Realizados</h2>
+            <p>A continuación se muestran los pagos realizados:</p>
+            <div id="payments-list" class="account-section">
+                <!-- Aquí se insertarán los pagos por JavaScript -->
+            </div>
+
+            <h2>Cálculo de Préstamos</h2>
+            <p>Utiliza la herramienta a continuación para calcular tus préstamos:</p>
+            <div class="loan-calculator">
+                <form id="loan-calculator-form">
+                    <label for="loan-amount">Monto del Préstamo:</label>
+                    <input type="number" id="loan-amount" name="loan-amount" placeholder="Ingrese monto" required>
+                    
+                    <label for="interest-rate">Tasa de Interés (%):</label>
+                    <input type="number" id="interest-rate" name="interest-rate" placeholder="Ingrese tasa" required>
+                    
+                    <label for="loan-term">Plazo del Préstamo (años):</label>
+                    <input type="number" id="loan-term" name="loan-term" placeholder="Ingrese plazo" required>
+                    
+                    <button type="submit">Calcular</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-include">
+        <footer class="footer">
+            <h2>&copy; 2024 Vancow</h2>
+            <div class="footer-info-adicional">
+                <a href="politica-privacidad">Política de Privacidad</a>
+                <a href="terminos-condiciones">Términos y Condiciones</a>
+                <a href="contacto">Contacto</a>
+            </div>
+            <div class="footer-redes-sociales">
+                <a href="https://wa.me/123456789">
+                    <img src="https://cdn.iconscout.com/icon/free/png-512/free-whatsapp-131-457973.png?f=webp&w=256" alt="WhatsApp">
+                </a>
+                <a href="https://www.facebook.com">
+                    <img src="https://cdn.iconscout.com/icon/free/png-512/free-facebook-redes-sociales-fb-logo-cuadrado-44659.png?f=webp&w=256" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com">
+                    <img src="https://cdn.iconscout.com/icon/free/png-512/free-instagram-46-151040.png?f=webp&w=256" alt="Instagram">
+                </a>
+                <a href="https://twitter.com">
+                    <img src="https://cdn.iconscout.com/icon/free/png-512/free-x-12020338-9823103.png?f=webp&w=256" alt="X">
+                </a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
